@@ -1,7 +1,7 @@
 # iDFusion: Globally Consistent Dense 3D Reconstruction from RGB-D and Inertial Measurements.
 
 ## Introduction
-This is the official code repository for iDFusion, which integrates the global optimization of IMU information into FlashFusion.
+This is the official code repository for iDFusion, which integrates the global optimization of IMU information into [FlashFusion](https://github.com/THU-luvision/Flashfusion).
 
 This is a project from LuVision SIGMA, Tsinghua University. Visit our website for more interesting works: http://www.luvision.net/
 
@@ -37,8 +37,10 @@ If you find our code useful, please kindly cite our paper:
 ### Preliminary Requirements:
 * Ubuntu 16.04/18.04
 * Intel cpu 
+* ROS Kinetic (follow the instructions on http://wiki.ros.org/kinetic)
 
 ### Compile
+
 ```bash
 source prepare.sh
 mkdir build
@@ -47,19 +49,9 @@ cmake ..
 make -j
 ```
 
-### Data preparation
-
-Put the dataset at `dataset/`, organized as 
-```
-dataset
-|---- iclnuim
-|---- tum
-|---- xtion
-```
-
 ### Usage 
 ```
-run ros
-publish data
-./af
+1. Start ros:     ./roscore
+2. Run iDFusion:  ./af
+3. Publish data:  ./rosbag play 0.bag
 ```
