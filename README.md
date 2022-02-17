@@ -50,6 +50,7 @@ make -j
 ```
 
 ### Usage 
+Download the dataset at https://153.35.185.228/opensource_data/id_fusion/dataset_idfusion.tar.gz
 ```
 1. Start ros:     ./roscore
 2. Run iDFusion:  ./af
